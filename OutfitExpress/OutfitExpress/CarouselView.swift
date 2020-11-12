@@ -42,20 +42,31 @@ struct CarouselView: View {
                             }
                             .onEnded{ value in
                                 withAnimation{
+                                    func selectItem(){
+                                        let category = self.items[0].category
+                                        let selectedItem: Item = AppData.selectedItemsForCreatingOutfit.filter{$0.category == category}[self.activeItemIndex]
+                                        AppData.activeItemsForCreatingOutfit.removeAll(where: {$0.category == category})
+                                        AppData.activeItemsForCreatingOutfit.append(selectedItem)
+                                    }
+                                    
+                                    /// Swiping left
                                     if value.translation.width < -self.minimumDragAmount &&
-                                        self.activeItemIndex + 1 < Int(numberOfCarouselItems) {  /// Swiping left
+                                        self.activeItemIndex + 1 < Int(numberOfCarouselItems) {
                                         self.activeItemIndex = self.activeItemIndex + 1
                                         self.dragged.width = -(CGFloat(self.activeItemIndex) * (cardWidth + spacing))
                                         self.accumulated = self.dragged
+                                        selectItem()
                                     }else{
                                         self.dragged = self.accumulated
-                                        
                                     }
+                                    
+                                    /// Swiping right
                                     if value.translation.width > self.minimumDragAmount &&
-                                        self.activeItemIndex - 1 >= 0 {   /// Swiping right
+                                        self.activeItemIndex - 1 >= 0 {
                                         self.activeItemIndex = self.activeItemIndex - 1
                                         self.dragged.width = -(CGFloat(self.activeItemIndex) * (cardWidth + spacing))
                                         self.accumulated = self.dragged
+                                        selectItem()
                                     }else{
                                         self.dragged = self.accumulated
                                     }

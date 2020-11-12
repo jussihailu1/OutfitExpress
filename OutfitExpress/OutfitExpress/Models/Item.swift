@@ -14,7 +14,6 @@ struct Item: Identifiable {
     var category: ItemCategory
     var tags: [Tag]
     var image: String
-    
     var selected: Bool = false
     
     init(){

@@ -8,11 +8,13 @@
 import Foundation
 
 struct AppData {
-    
+    static var carouselOnApearCounter: Int = 0
     static var outfitName: String = ""
+    
     public static var userIsreatingOutfit = false
     
     static var selectedItemsForCreatingOutfit: [Item] = []
+    static var activeItemsForCreatingOutfit: [Item] = []
     
     static let categories = [
         ItemCategory(id: 1, name: "Headwear"),

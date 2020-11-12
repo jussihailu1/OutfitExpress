@@ -19,7 +19,6 @@ struct FilterView: View {
     
     var body: some View {
         VStack(spacing: 30){
-            
             if AppData.userIsreatingOutfit{
             HStack{
                 Spacer()
@@ -51,6 +50,9 @@ struct FilterView: View {
                             NavigationLink(destination: CreateOutfitView(), tag: 1, selection: $selection) {
                                 Button(action: {
                                     AppData.selectedItemsForCreatingOutfit.append(item)
+                                    if !AppData.activeItemsForCreatingOutfit.contains(where: {$0.category == item.category}){
+                                        AppData.activeItemsForCreatingOutfit.append(item)
+                                    }
                                     self.selection = 1
                                 }) {
                                     ItemInGridView(item: item, selecting: self.selecting)

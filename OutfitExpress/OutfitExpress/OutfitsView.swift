@@ -16,18 +16,20 @@ struct OutfitsView: View {
     
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                if selecting {
-                    Button(action: { self.selecting = false }, label: {
-                        Text("Delete").padding(.horizontal).padding(.vertical, 5).background(Color.red).cornerRadius(50).foregroundColor(.white)
-                    })
-                }else{
-                    Button(action: { self.selecting = true }, label: {
-                        Text("Select").padding(.horizontal).padding(.vertical, 5).background(Color.gray).cornerRadius(50).foregroundColor(.white)
-                    })
-                }
-            }.padding()
+            if outfits.count > 0{
+                HStack{
+                    Spacer()
+                    if  selecting {
+                        Button(action: { self.selecting = false }, label: {
+                            Text("Delete").padding(.horizontal).padding(.vertical, 5).background(Color.red).cornerRadius(50).foregroundColor(.white)
+                        })
+                    }else{
+                        Button(action: { self.selecting = true }, label: {
+                            Text("Select").padding(.horizontal).padding(.vertical, 5).background(Color.gray).cornerRadius(50).foregroundColor(.white)
+                        })
+                    }
+                }.padding()
+            }
             ScrollView{
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], alignment: .center, spacing: 20){
                     ForEach(outfits){ outfit in
@@ -38,7 +40,10 @@ struct OutfitsView: View {
                             }
                             Text(outfit.name!)
                             if selecting{
-                                Button(action: {}, label: {
+                                Button(action: {
+                                    context.delete(outfit)
+                                    try? context.save()
+                                }, label: {
                                     Text("Delete").frame(width: 100, height: 5).padding(.vertical, 10).background(Color.red).foregroundColor(.white).cornerRadius(10)
                                 })
                             }

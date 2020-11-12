@@ -20,6 +20,9 @@ struct ItemInGridView: View {
                     item.selected = !item.selected
                     if item.selected {
                         AppData.selectedItemsForCreatingOutfit.append(item)
+                        if !AppData.activeItemsForCreatingOutfit.contains(where: {$0.category == item.category}){
+                            AppData.activeItemsForCreatingOutfit.append(item)
+                        }
                     }else{
                         AppData.selectedItemsForCreatingOutfit.remove(at: AppData.selectedItemsForCreatingOutfit.firstIndex(where: { $0.id == item.id})!
                         )
@@ -32,7 +35,6 @@ struct ItemInGridView: View {
                             .scaledToFit()
                         Spacer()
                         Text(item.name).foregroundColor(.white).onAppear{
-                            print(item)
                         }
                     }
                 })

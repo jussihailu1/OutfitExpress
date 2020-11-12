@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
-    @FetchRequest(entity: CDOutfit.entity(), sortDescriptors: []) var outfits: FetchedResults<CDOutfit>
-    
+struct HomeView: View {    
     @State var selection: Int? = nil
     
     var body: some View { 

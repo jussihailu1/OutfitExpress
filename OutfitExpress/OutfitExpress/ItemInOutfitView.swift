@@ -14,7 +14,6 @@ struct ItemInOutfitView: View {
     let itemIndex: Int
     var activeItemIndex: Int = 0
     var opacity: Double { return itemIndex == activeItemIndex ? 1 : 0.2}
-    @State var isActive: Bool = false
     
     init(item: Item, cardSize: CGSize){
         self.item = item

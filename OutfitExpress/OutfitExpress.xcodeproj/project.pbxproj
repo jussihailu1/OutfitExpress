@@ -43,7 +43,7 @@
 		8DEDA76E255C7F9100EEA94D /* CreateOutfitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOutfitView.swift; sourceTree = "<group>"; };
 		8DEDA76F255C7F9100EEA94D /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8DEDA770255C7F9100EEA94D /* AddItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
-		8DEDA771255C7F9100EEA94D /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		8DEDA771255C7F9100EEA94D /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		8DEDA772255C7F9100EEA94D /* ItemInGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInGridView.swift; sourceTree = "<group>"; };
 		8DEDA773255C7F9100EEA94D /* ItemInOutfitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInOutfitView.swift; sourceTree = "<group>"; };
 		8DEDA774255C7F9100EEA94D /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
