@@ -39,21 +39,21 @@
 		8DEDA761255C7E3500EEA94D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8DEDA764255C7E3500EEA94D /* OutfitExpress.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OutfitExpress.xcdatamodel; sourceTree = "<group>"; };
 		8DEDA766255C7E3500EEA94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DEDA76D255C7F9100EEA94D /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterView.swift; path = ../../../DUOAPPS3/DUOAPP/FilterView.swift; sourceTree = "<group>"; };
-		8DEDA76E255C7F9100EEA94D /* CreateOutfitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateOutfitView.swift; path = ../../../DUOAPPS3/DUOAPP/CreateOutfitView.swift; sourceTree = "<group>"; };
-		8DEDA76F255C7F9100EEA94D /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../DUOAPPS3/DUOAPP/HomeView.swift; sourceTree = "<group>"; };
-		8DEDA770255C7F9100EEA94D /* AddItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemView.swift; path = ../../../DUOAPPS3/DUOAPP/AddItemView.swift; sourceTree = "<group>"; };
-		8DEDA771255C7F9100EEA94D /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselView.swift; path = ../../../DUOAPPS3/DUOAPP/CarouselView.swift; sourceTree = "<group>"; };
-		8DEDA772255C7F9100EEA94D /* ItemInGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemInGridView.swift; path = ../../../DUOAPPS3/DUOAPP/ItemInGridView.swift; sourceTree = "<group>"; };
-		8DEDA773255C7F9100EEA94D /* ItemInOutfitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemInOutfitView.swift; path = ../../../DUOAPPS3/DUOAPP/ItemInOutfitView.swift; sourceTree = "<group>"; };
-		8DEDA774255C7F9100EEA94D /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemView.swift; path = ../../../DUOAPPS3/DUOAPP/ItemView.swift; sourceTree = "<group>"; };
-		8DEDA775255C7F9200EEA94D /* OutfitsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutfitsView.swift; path = ../../../DUOAPPS3/DUOAPP/OutfitsView.swift; sourceTree = "<group>"; };
-		8DEDA776255C7F9200EEA94D /* ClosetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClosetView.swift; path = ../../../DUOAPPS3/DUOAPP/ClosetView.swift; sourceTree = "<group>"; };
+		8DEDA76D255C7F9100EEA94D /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		8DEDA76E255C7F9100EEA94D /* CreateOutfitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOutfitView.swift; sourceTree = "<group>"; };
+		8DEDA76F255C7F9100EEA94D /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8DEDA770255C7F9100EEA94D /* AddItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		8DEDA771255C7F9100EEA94D /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		8DEDA772255C7F9100EEA94D /* ItemInGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInGridView.swift; sourceTree = "<group>"; };
+		8DEDA773255C7F9100EEA94D /* ItemInOutfitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInOutfitView.swift; sourceTree = "<group>"; };
+		8DEDA774255C7F9100EEA94D /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		8DEDA775255C7F9200EEA94D /* OutfitsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitsView.swift; sourceTree = "<group>"; };
+		8DEDA776255C7F9200EEA94D /* ClosetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosetView.swift; sourceTree = "<group>"; };
 		8DEDA783255C7FC700EEA94D /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
-		8DEDA788255C803000EEA94D /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = ../../../../DUOAPPS3/DUOAPP/Models/Tag.swift; sourceTree = "<group>"; };
-		8DEDA789255C803000EEA94D /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Outfit.swift; path = ../../../../DUOAPPS3/DUOAPP/Models/Outfit.swift; sourceTree = "<group>"; };
-		8DEDA78A255C803000EEA94D /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../../../../DUOAPPS3/DUOAPP/Models/Item.swift; sourceTree = "<group>"; };
-		8DEDA78B255C803000EEA94D /* ItemCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCategory.swift; path = ../../../../DUOAPPS3/DUOAPP/Models/ItemCategory.swift; sourceTree = "<group>"; };
+		8DEDA788255C803000EEA94D /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		8DEDA789255C803000EEA94D /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		8DEDA78A255C803000EEA94D /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8DEDA78B255C803000EEA94D /* ItemCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
