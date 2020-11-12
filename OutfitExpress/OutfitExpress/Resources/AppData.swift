@@ -9,11 +9,8 @@ import Foundation
 
 struct AppData {
     
-    public static var userIsreatingOutfit = false;
-    
-    public static func getUserIsCreating() -> Bool {
-        return userIsreatingOutfit
-    }
+    static var outfitName: String = ""
+    public static var userIsreatingOutfit = false
     
     static var selectedItemsForCreatingOutfit: [Item] = []
     

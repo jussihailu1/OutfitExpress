@@ -86,11 +86,10 @@
 		8DEDA757255C7E3300EEA94D /* OutfitExpress */ = {
 			isa = PBXGroup;
 			children = (
-				8DEDA787255C7FFA00EEA94D /* Models */,
-				8DEDA782255C7FAF00EEA94D /* Resources */,
 				8DEDA770255C7F9100EEA94D /* AddItemView.swift */,
 				8DEDA771255C7F9100EEA94D /* CarouselView.swift */,
 				8DEDA776255C7F9200EEA94D /* ClosetView.swift */,
+				8DEDA75A255C7E3300EEA94D /* ContentView.swift */,
 				8DEDA76E255C7F9100EEA94D /* CreateOutfitView.swift */,
 				8DEDA76D255C7F9100EEA94D /* FilterView.swift */,
 				8DEDA76F255C7F9100EEA94D /* HomeView.swift */,
@@ -99,11 +98,11 @@
 				8DEDA774255C7F9100EEA94D /* ItemView.swift */,
 				8DEDA775255C7F9200EEA94D /* OutfitsView.swift */,
 				8DEDA758255C7E3300EEA94D /* OutfitExpressApp.swift */,
-				8DEDA75A255C7E3300EEA94D /* ContentView.swift */,
 				8DEDA75C255C7E3500EEA94D /* Assets.xcassets */,
-				8DEDA761255C7E3500EEA94D /* Persistence.swift */,
 				8DEDA766255C7E3500EEA94D /* Info.plist */,
 				8DEDA763255C7E3500EEA94D /* OutfitExpress.xcdatamodeld */,
+				8DEDA787255C7FFA00EEA94D /* Models */,
+				8DEDA782255C7FAF00EEA94D /* Resources */,
 				8DEDA75E255C7E3500EEA94D /* Preview Content */,
 			);
 			path = OutfitExpress;
@@ -120,6 +119,7 @@
 		8DEDA782255C7FAF00EEA94D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DEDA761255C7E3500EEA94D /* Persistence.swift */,
 				8DEDA783255C7FC700EEA94D /* AppData.swift */,
 			);
 			path = Resources;
