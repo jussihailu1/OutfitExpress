@@ -10,41 +10,30 @@ import SwiftUI
 struct ClosetView: View {
     
     var body: some View {
-        
-        VStack(spacing: 60 ){
-            if AppData.userIsreatingOutfit {
-                Text("Selecting items for outfit").padding()
-            }
-            HStack{
+        ZStack{
+            Color.black.ignoresSafeArea(.all)
+            VStack(spacing: 60){
+                Text("Closet").font(.system(size: 30)).padding(.top, 50).foregroundColor(.white)
+                if AppData.userIsreatingOutfit {
+                    Text("Selecting items for outfit").padding()
+                }
                 VStack{
-                    ForEach(AppData.categories.prefix(3), id: \.id){ category in
+                    ForEach(AppData.categories, id: \.id){ category in
                         NavigationLink(
                             destination: FilterView(chosenCategory: category),
                             label: {
-                                Text(category.name).frame(width: 150, height: 40)
-                                    .background(Color.gray)
+                                Text(category.name)
+                                    .font(.system(size: 20))
+                                    .frame(width: 250, height: 50)
+                                    .background(AppData.gradient)
                                     .foregroundColor(.white)
-                                    .cornerRadius(10).padding()
+                                    .cornerRadius(25).padding()
                             })
                     }
                 }
-                VStack{
-                    ForEach(AppData.categories.suffix(3), id: \.id){ category in
-                        NavigationLink(
-                            destination: FilterView(chosenCategory: category),
-                            label: {
-                                Text(category.name).frame(width: 150, height: 40)
-                                    .background(Color.gray)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10).padding()
-                            })
-                    }
-                }
-            }
-            Spacer()
-        }.onAppear{
-            
-        }.navigationBarTitle("Closet", displayMode: .inline)
+                Spacer()
+            }.offset(y: -70)
+        }
     }
 }
 

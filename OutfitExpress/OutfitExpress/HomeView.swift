@@ -10,31 +10,42 @@ import SwiftUI
 struct HomeView: View {    
     @State var selection: Int? = nil
     
+    init(){
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
     var body: some View { 
         NavigationView{
-            VStack{
-                Spacer()
-                NavigationLink(
-                    destination: ClosetView(),
-                    label: {
-                        Text("Closet")
-                            .padding(50).background(Color.gray)
-                            .cornerRadius(15).foregroundColor(Color.white)
-                            .font(.headline)
-                    }
-                )
-                Spacer()
-                NavigationLink(
-                    destination: OutfitsView(),
-                    label: {
-                        Text("Outfits")
-                            .padding(50).background(Color.gray)
-                            .cornerRadius(15).foregroundColor(Color.white)
-                            .font(.headline)
-                    }
-                )
-                Spacer()
-            }.navigationBarTitle("[APPNAME]")
+            ZStack{
+                Color.black.ignoresSafeArea(.all)
+                VStack{
+                    Spacer()
+                    NavigationLink(
+                        destination: ClosetView(),
+                        label: {
+                            Text("Closet")
+                                .frame(width: 350, height: 300)
+                                .background(AppData.gradient)
+                                .cornerRadius(15)
+                                .foregroundColor(Color.white)
+                                .font(.system(size: 40))
+                        }
+                    )
+                    Spacer()
+                    NavigationLink(
+                        destination: OutfitsView(),
+                        label: {
+                            Text("Outfits")
+                                .frame(width: 350, height: 300)
+                                .background(AppData.gradient)
+                                .cornerRadius(15)
+                                .foregroundColor(Color.white)
+                                .font(.system(size: 40))
+                        }
+                    )
+                    Spacer()
+                }
+            }.navigationBarTitle("OutfitExpress")
         }
     }
 }

@@ -73,6 +73,7 @@ struct CarouselView: View {
                                 }
                             }
                     )
+                    .gesture(LongPressGesture().onChanged{_ in print("LONG ASS PRESS")})
             }
         }.offset(x: self.startOffsetX + self.padding)
     }

@@ -24,13 +24,6 @@ struct CreateOutfitView: View {
                         CarouselView(items: AppData.selectedItemsForCreatingOutfit.filter{$0.category == category})
                     }
                 }.navigationBarTitle("Create outfit")
-            }.onAppear{
-                print("--------------------------------------------------------------------------------------------------------------------------------------")
-                print("CREATEOUTFITVIEW ONAPPEAR")
-                print("Total active items: " + AppData.activeItemsForCreatingOutfit.count.description)
-                print("Active items:")
-                print(AppData.activeItemsForCreatingOutfit)
-                print("--------------------------------------------------------------------------------------------------------------------------------------")
             }
             HStack{
                 Spacer()
@@ -49,8 +42,7 @@ struct CreateOutfitView: View {
                         let outfit = CDOutfit(context: context)
                         outfit.id = Int64(outfits.count + 1)
                         outfit.name = self.outfitName
-                        let items = AppData.activeItemsForCreatingOutfit.map{ $0.id }
-//                        print(items)
+                        let items = AppData.activeItemsForCreatingOutfit.sorted{$0.category.id < $1.category.id}.map{ $0.id }
                         outfit.items = items
                         try? self.context.save()
                         AppData.selectedItemsForCreatingOutfit.removeAll()

@@ -5,10 +5,13 @@
 //  Created by Jussi Hailu on 29/10/2020.
 //
 
+import SwiftUI
 import Foundation
 
 struct AppData {
-    static var carouselOnApearCounter: Int = 0
+    
+    static let gradient = LinearGradient(gradient: Gradient(colors: [Color(UIColor.systemBlue),.pink]), startPoint: .leading, endPoint: .trailing)
+    
     static var outfitName: String = ""
     
     public static var userIsreatingOutfit = false

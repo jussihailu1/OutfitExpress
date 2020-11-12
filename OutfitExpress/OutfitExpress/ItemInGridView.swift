@@ -13,7 +13,6 @@ struct ItemInGridView: View {
     let selecting: Bool
     
     var body: some View {
-        
         ZStack{
             if selecting{
                 Button(action: {
@@ -24,8 +23,7 @@ struct ItemInGridView: View {
                             AppData.activeItemsForCreatingOutfit.append(item)
                         }
                     }else{
-                        AppData.selectedItemsForCreatingOutfit.remove(at: AppData.selectedItemsForCreatingOutfit.firstIndex(where: { $0.id == item.id})!
-                        )
+                        AppData.selectedItemsForCreatingOutfit.remove(at: AppData.selectedItemsForCreatingOutfit.firstIndex(where: { $0.id == item.id})!)
                     }
                 }, label: {
                     VStack{
@@ -34,8 +32,7 @@ struct ItemInGridView: View {
                             .resizable()
                             .scaledToFit()
                         Spacer()
-                        Text(item.name).foregroundColor(.white).onAppear{
-                        }
+                        Text(item.name).foregroundColor(.white).scaledToFit()
                     }
                 })
                 VStack{
@@ -52,7 +49,7 @@ struct ItemInGridView: View {
                         }, label: {
                             Text(item.selected || AppData.selectedItemsForCreatingOutfit.contains(where: {$0.id == item.id}) ? "✓" : "").foregroundColor(.white)
                                 .frame(width: 22, height: 22)
-                                .background(item.selected ? Color.blue : Color.gray).cornerRadius(20)
+                                .background(item.selected || AppData.selectedItemsForCreatingOutfit.contains(where: {$0.id == item.id}) ? Color.blue : Color.gray).cornerRadius(20)
                                 .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 2))
                         })
                     }
@@ -65,20 +62,23 @@ struct ItemInGridView: View {
                         .resizable()
                         .scaledToFit()
                     Spacer()
-                    Text(item.name).foregroundColor(.white)
+                    Text(item.name).foregroundColor(.white).scaledToFit()
                 }
             }
         }
         .frame(width: 100, height: 160)
         .padding(5)
-        .background(Color.gray)
+        .background(Color.white)
         .cornerRadius(15)
-        .shadow(radius: 5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 15)
+                .stroke(AppData.gradient, lineWidth: 5)
+        )
     }
 }
 
 struct ItemInGridView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemInGridView(item: AppData.items[10], selecting: true)
+        ItemInGridView(item: AppData.items[10], selecting: false)
     }
 }
