@@ -62,11 +62,11 @@ struct ItemInGridView: View {
                         .resizable()
                         .scaledToFit()
                     Spacer()
-                    Text(item.name).foregroundColor(.white).scaledToFit()
+                    Text(item.name).foregroundColor(.black).scaledToFit()
                 }
             }
         }
-        .frame(width: 100, height: 160)
+        .frame(width: UIScreen.main.bounds.width * 0.22, height: UIScreen.main.bounds.height * 0.16)
         .padding(5)
         .background(Color.white)
         .cornerRadius(15)

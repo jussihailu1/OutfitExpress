@@ -64,7 +64,7 @@ struct OutfitsView: View {
                     }) {
                         Text("Create outfit")
                             .foregroundColor(.white)
-                            .frame(width: 150, height: 50)
+                            .frame(width: UIScreen.main.bounds.width * 0.36, height: UIScreen.main.bounds.height * 0.05)
                             .background(AppData.gradient)
                             .cornerRadius(15)
                     }

@@ -17,14 +17,14 @@ struct ItemView: View {
             VStack{
                 Text(item.name).font(.title).padding().foregroundColor(.white).offset(y: -70)
                 Spacer()
-                Circle().fill(Color.white).frame(width: 400, height: 400).overlay(
+                Circle().fill(Color.white).frame(width: UIScreen.main.bounds.width * 0.95, height: UIScreen.main.bounds.width * 0.95).overlay(
                     Image(item.name)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 250, height: 250)
+                        .frame(width: UIScreen.main.bounds.width * 0.6, height: UIScreen.main.bounds.width * 0.6)
                         .overlay(RoundedRectangle(cornerRadius: 500)
                                     .stroke(AppData.gradient, lineWidth: 10)
-                                    .frame(width: 375, height: 375)
+                                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.width * 0.9)
                                     .opacity(1))
                 )
                 Spacer()
@@ -33,7 +33,7 @@ struct ItemView: View {
                     Button(action: {}, label: {
                         Text("Edit")
                             .foregroundColor(.white)
-                            .frame(width: 150, height: 50)
+                            .frame(width: UIScreen.main.bounds.width * 0.36, height: UIScreen.main.bounds.height * 0.05)
                             .background(AppData.gradient)
                             .cornerRadius(15)
                     })
@@ -41,7 +41,7 @@ struct ItemView: View {
                     Button(action: {}, label: {
                         Text("Delete")
                             .foregroundColor(.white)
-                            .frame(width: 150, height: 50)
+                            .frame(width: UIScreen.main.bounds.width * 0.36, height: UIScreen.main.bounds.height * 0.05)
                             .background(AppData.gradient)
                             .cornerRadius(15)
                     })
@@ -57,3 +57,6 @@ struct ItemView_Previews: PreviewProvider {
         ItemView(item: AppData.items[19])
     }
 }
+
+// width: 414
+// height: 896

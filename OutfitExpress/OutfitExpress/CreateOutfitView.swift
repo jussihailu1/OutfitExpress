@@ -31,7 +31,7 @@ struct CreateOutfitView: View {
                                                 .filter{$0.category == category})
                             }
                         }
-                    }
+                    }.padding()
                 }
                 HStack{
                     Spacer()
@@ -40,33 +40,35 @@ struct CreateOutfitView: View {
                         label: {
                             Text("Add items")
                                 .foregroundColor(.white)
-                                .frame(width: 150, height: 50)
+                                .frame(width: UIScreen.main.bounds.width * 0.36, height: UIScreen.main.bounds.height * 0.05)
                                 .background(AppData.gradient)
                                 .cornerRadius(15)
                         })
                     Spacer()
-                    NavigationLink(destination: OutfitsView(), tag: 1, selection: $selection) {
-                        Button(action: {
-                            let outfit = CDOutfit(context: context)
-                            outfit.id = Int64(outfits.count + 1)
-                            outfit.name = self.outfitName
-                            let items = AppData.activeItemsForCreatingOutfit
-                                .sorted{$0.category.id < $1.category.id}.map{ $0.id }
-                            outfit.items = items
-                            try? self.context.save()
-                            AppData.userIsreatingOutfit = false
-                            AppData.selectedItemsForCreatingOutfit.removeAll()
-                            AppData.activeItemsForCreatingOutfit.removeAll()
-                            self.selection = 1
-                        }) {
-                            Text("Save")
-                                .foregroundColor(.white)
-                                .frame(width: 150, height: 50)
-                                .background(AppData.gradient)
-                                .cornerRadius(15)
+                    if AppData.selectedItemsForCreatingOutfit.count > 0 && AppData.userIsreatingOutfit {
+                        NavigationLink(destination: OutfitsView(), tag: 1, selection: $selection) {
+                            Button(action: {
+                                let outfit = CDOutfit(context: context)
+                                outfit.id = Int64(outfits.count + 1)
+                                outfit.name = self.outfitName
+                                let items = AppData.activeItemsForCreatingOutfit
+                                    .sorted{$0.category.id < $1.category.id}.map{ $0.id }
+                                outfit.items = items
+                                try? self.context.save()
+                                AppData.userIsreatingOutfit = false
+                                AppData.selectedItemsForCreatingOutfit.removeAll()
+                                AppData.activeItemsForCreatingOutfit.removeAll()
+                                self.selection = 1
+                            }) {
+                                Text("Save")
+                                    .foregroundColor(.white)
+                                    .frame(width: UIScreen.main.bounds.width * 0.36, height: UIScreen.main.bounds.height * 0.05)
+                                    .background(AppData.gradient)
+                                    .cornerRadius(15)
+                            }
                         }
+                        Spacer()
                     }
-                    Spacer()
                 }
             }
         }

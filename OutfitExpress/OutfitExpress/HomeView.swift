@@ -24,7 +24,8 @@ struct HomeView: View {
                         destination: ClosetView(),
                         label: {
                             Text("Closet")
-                                .frame(width: 350, height: 300)
+                                .frame(width: UIScreen.main.bounds.width * 0.85,
+                                       height: UIScreen.main.bounds.width * 0.75)
                                 .background(AppData.gradient)
                                 .cornerRadius(15)
                                 .foregroundColor(Color.white)
@@ -36,7 +37,8 @@ struct HomeView: View {
                         destination: OutfitsView(),
                         label: {
                             Text("Outfits")
-                                .frame(width: 350, height: 300)
+                                .frame(width: UIScreen.main.bounds.width * 0.85,
+                                       height: UIScreen.main.bounds.width * 0.75)
                                 .background(AppData.gradient)
                                 .cornerRadius(15)
                                 .foregroundColor(Color.white)

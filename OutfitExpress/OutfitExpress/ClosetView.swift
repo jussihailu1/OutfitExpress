@@ -12,8 +12,8 @@ struct ClosetView: View {
     var body: some View {
         ZStack{
             Color.black.ignoresSafeArea(.all)
-            VStack(spacing: 60){
-                Text("Closet").font(.system(size: 30)).padding(.top, 20).foregroundColor(.white).offset(y: -90)
+            VStack(spacing: UIScreen.main.bounds.height * 0.04){
+                Text("Closet").font(.system(size: 30)).foregroundColor(.white).offset(y: -70)
                 if AppData.userIsreatingOutfit {
                     Text("Selecting items for outfit").foregroundColor(.white).padding()
                 }
@@ -24,7 +24,7 @@ struct ClosetView: View {
                             label: {
                                 Text(category.name)
                                     .font(.system(size: 20))
-                                    .frame(width: 250, height: 50)
+                                    .frame(width: UIScreen.main.bounds.width * 2 / 3 , height: 50)
                                     .background(AppData.gradient)
                                     .foregroundColor(.white)
                                     .cornerRadius(25).padding()
@@ -42,3 +42,7 @@ struct ClosetView_Previews: PreviewProvider {
         ClosetView()
     }
 }
+
+
+// width = 375
+// height = 812

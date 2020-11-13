@@ -39,8 +39,12 @@ struct ItemInOutfitView: View {
                     Image(item.name)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: self.cardSize.width - 15, height: self.cardSize.height - 15)
+                        .frame(width: self.cardSize.width - 10, height: self.cardSize.height - 10)
                         .opacity(self.opacity)
+                        .overlay(RoundedRectangle(cornerRadius: 500)
+                                    .stroke(AppData.gradient, lineWidth: 2)
+                                    .frame(width: self.cardSize.width - 15, height: self.cardSize.width - 15)
+                                    .opacity(1))
                 )
             } else {
                 Image(item.name)

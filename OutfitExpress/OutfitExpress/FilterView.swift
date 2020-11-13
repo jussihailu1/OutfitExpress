@@ -21,7 +21,7 @@ struct FilterView: View {
         ZStack{
             Color.black.ignoresSafeArea()
             VStack(spacing: 30){
-                Text("Closet").font(.system(size: 30)).foregroundColor(.white).offset(y: -70)
+                Text(chosenCategory.name).font(.system(size: 30)).foregroundColor(.white).offset(y: -70)
                 if AppData.userIsreatingOutfit{
                     HStack{
                         Spacer()
