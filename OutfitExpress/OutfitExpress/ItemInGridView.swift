@@ -50,7 +50,7 @@ struct ItemInGridView: View {
                             Text(item.selected || AppData.selectedItemsForCreatingOutfit.contains(where: {$0.id == item.id}) ? "✓" : "").foregroundColor(.white)
                                 .frame(width: 22, height: 22)
                                 .background(item.selected || AppData.selectedItemsForCreatingOutfit.contains(where: {$0.id == item.id}) ? Color.blue : Color.gray).cornerRadius(20)
-                                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 2))
+                                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 2))
                         })
                     }
                     Spacer()
@@ -72,7 +72,7 @@ struct ItemInGridView: View {
         .cornerRadius(15)
         .overlay(
             RoundedRectangle(cornerRadius: 15)
-                .stroke(AppData.gradient, lineWidth: 5)
+                .stroke(AppData.gradient, lineWidth: 4)
         )
     }
 }

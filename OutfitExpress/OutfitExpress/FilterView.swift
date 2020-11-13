@@ -21,7 +21,7 @@ struct FilterView: View {
         ZStack{
             Color.black.ignoresSafeArea()
             VStack(spacing: 30){
-                Text("Closet").font(.system(size: 30)).foregroundColor(.white)
+                Text("Closet").font(.system(size: 30)).foregroundColor(.white).offset(y: -70)
                 if AppData.userIsreatingOutfit{
                     HStack{
                         Spacer()
@@ -39,10 +39,10 @@ struct FilterView: View {
                             })
                         }else{
                             Button(action: { self.selecting = true }, label: {
-                                Text("Select").padding(.horizontal).padding(.vertical, 5).background(Color.gray).cornerRadius(50).foregroundColor(.white)
+                                Text("Select").padding(.horizontal).padding(.vertical, 5).background(AppData.gradient).cornerRadius(50).foregroundColor(.white)
                             })
                         }
-                    }.padding()
+                    }.padding().padding(.vertical, -30)
                 }
                 
                 ScrollView{
@@ -80,7 +80,7 @@ struct FilterView: View {
                         }
                     }.padding(.vertical)
                 }
-            }.padding().offset(y: -70)
+            }.padding()
         }
     }
 }

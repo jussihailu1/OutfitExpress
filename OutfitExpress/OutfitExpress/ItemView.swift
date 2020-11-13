@@ -15,7 +15,7 @@ struct ItemView: View {
         ZStack{
             Color.black.ignoresSafeArea(.all)
             VStack{
-                Text(item.name).font(.title).padding().foregroundColor(.white)
+                Text(item.name).font(.title).padding().foregroundColor(.white).offset(y: -70)
                 Spacer()
                 Circle().fill(Color.white).frame(width: 400, height: 400).overlay(
                     Image(item.name)
@@ -47,7 +47,7 @@ struct ItemView: View {
                     })
                     Spacer()
                 }
-            }.offset(y: -70)
+            }
         }
     }
 }
